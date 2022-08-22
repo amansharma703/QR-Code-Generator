@@ -13,7 +13,11 @@ const InputColor = () => {
     const handleChange = (color) => setColor(color.hex);
 
     return (
-        <div>
+        <div
+            onClick={(e) => {
+                e.stopPropagation();
+            }}
+        >
             <label className='font-medium text-sm'>Color</label>
             <div className='flex items-center gap-2'>
                 <div
